@@ -1,0 +1,51 @@
+.tbl_tbl{
+    display: table;    
+}
+.tbl_row{
+    display: table-row;
+}
+
+.tbl_cell{
+    display: table-cell;
+    padding: 5px 0;
+}
+
+.btn_gen{
+    border: solid 1px grey;
+    border-radius: 3px;
+    background: #edeaea;
+    cursor: pointer;
+    line-height: 28px;
+    transition: all 0.1s;
+}
+.btn_gen:hover{
+    box-shadow: 2px 2px 4px 0px lightgrey;
+}
+
+INPUT[type='text']{
+    line-height: 30px;
+    border-radius: 3px;
+    border: solid 1px grey;
+    padding: 0 4px;
+}
+
+.error{
+    color: red;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tbl_tbl, .tbl_row, .btn_gen{
+        width: 100%;
+    }
+    .tbl_cell{
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    
+    INPUT[type='text']{
+        width: 100%;
+    }
+}

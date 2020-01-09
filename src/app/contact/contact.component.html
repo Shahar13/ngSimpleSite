@@ -1,0 +1,76 @@
+<div>
+  <h1>
+    Contact Us
+  </h1>
+
+  <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    <h5 *ngIf="success">Your form is valid</h5>
+
+    <!-- table -->
+    <div class="tbl_tbl">
+      <!-- row 1 -->
+      <div class="tbl_row">
+        <div class="tbl_cell">
+          Name: 
+        </div>
+        <div class="tbl_cell">
+            <input type="text" formControlName="name" placeholder="Name" />
+        </div>
+      </div>
+      <!-- row 2-->
+      <div class="tbl_row">
+        <div class="tbl_cell">
+          <div *ngIf="submitted && messageForm.controls.name.errors">
+            <div *ngIf="messageForm.controls.name.errors.required" class="error">
+              Your name is required
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="tbl_row">
+        <div class="tbl_cell">
+          Message: 
+        </div>
+        <div class="tbl_cell">
+          <input type="text" formControlName="message" placeholder="Message" />
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="tbl_row">
+        <div class="tbl_cell">
+          <div *ngIf="submitted && messageForm.controls.message.errors">
+            <div *ngIf="messageForm.controls.message.errors.required" class="error">
+              Your message is required
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- row 5 -->
+      <div class="tbl_row">
+        <div class="tbl_cell">
+          <input type="submit" value="Send message" class="btn_gen" title="Send message">
+        </div>
+      </div>
+    
+    </div>
+    <!-- End of table -->
+
+  </form>
+
+  <div *ngIf="submitted" class="results" style="margin-top: 20px;font-size: 14px;">
+      <strong>Name:</strong>
+      <span>
+        {{messageForm.controls.name.value}}
+      </span>
+      <br />
+      <strong>Message:</strong>
+      <span>
+        {{messageForm.controls.message.value}}
+      </span>
+        
+  </div>
+</div>

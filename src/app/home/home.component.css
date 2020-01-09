@@ -1,0 +1,39 @@
+.grey{
+    color: grey;
+}
+
+.user {
+    padding: 0;
+    margin-left: 0;
+}
+
+.user li {
+    list-style-type: none;
+    background: lightgrey;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.user li IMG {
+    width: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+/*     
+    .user {
+        width: 100%;
+        float: none;
+        text-align: left;
+        margin: 7px 0 0 -19px;
+    }
+    .user li {
+        width: 100%;
+        border: solid 1px red;
+        overflow: hidden;
+        line-height: 30px;
+    } 
+*/
+}   
